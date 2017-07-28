@@ -21,7 +21,7 @@ public class Mash{
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Welcome to MASH!");
-.		System.out.println("Please enter the names of the categories you would like to use, (the MASH category is already implemented)");
+		System.out.println("Please enter the names of the categories you would like to use, (the MASH category is already implemented)");
 		System.out.println();
 		System.out.println("Enter (Please seperate by commas): ");
 
@@ -59,8 +59,10 @@ public class Mash{
 		System.out.println("According to proven science, this is your life");
 		System.out.println("----------------------------------------------");
     for(int i =0; i<categories.size(); i++){
-      System.out.print(categories.get(i).getName()+": ");
-      System.out.println(categories.get(i).getOptions()[randint.nextInt(categories.get(i).getOptions().length)]);
+      String[] list= categories.get(i).getOptions();
+      System.out.println(categories.get(i).getName()+": "+ list[randint.nextInt(list.length)]);
+      //System.out.print(categories.get(i).getName()+": ");
+      //System.out.println(categories.get(i).getOptions()[randint.nextInt(categories.get(i).getOptions().length)]);
       //System.out.println(categories[i] + ": " +
     }
 	}
